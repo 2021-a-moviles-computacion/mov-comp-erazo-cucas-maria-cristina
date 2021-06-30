@@ -29,23 +29,13 @@
     <property name="RunOnceActivity.ShowReadmeOnStart" value="true" />
     <property name="WebServerToolWindowFactoryState" value="false" />
     <property name="aspect.path.notification.shown" value="true" />
+    <property name="last_opened_file_path" value="$PROJECT_DIR$" />
     <property name="node.js.detected.package.eslint" value="true" />
     <property name="node.js.detected.package.tslint" value="true" />
     <property name="node.js.selected.package.eslint" value="(autodetect)" />
     <property name="node.js.selected.package.tslint" value="(autodetect)" />
   </component>
   <component name="RunManager">
-    <configuration default="true" type="ArquillianJUnit" factoryName="" nameIsGenerated="true">
-      <option name="arquillianRunConfiguration">
-        <value>
-          <option name="containerStateName" value="" />
-        </value>
-      </option>
-      <option name="TEST_OBJECT" value="class" />
-      <method v="2">
-        <option name="Make" enabled="true" />
-      </method>
-    </configuration>
     <configuration name="MainKt" type="JetRunConfigurationType" temporary="true" nameIsGenerated="true">
       <option name="MAIN_CLASS_NAME" value="MainKt" />
       <module name="clases-Klotin.main" />
@@ -83,6 +73,7 @@
       <workItem from="1623171300634" duration="1898000" />
       <workItem from="1623255057620" duration="6318000" />
       <workItem from="1623687382317" duration="6096000" />
+      <workItem from="1624131231915" duration="3847000" />
     </task>
     <servers />
   </component>

@@ -1,5 +1,6 @@
 <resources>
-   <string name="app_name" translatable="false">aplicaciones moviles 2021 a</string>
+    <string name="app_name" translatable="false">aplicaciones moviles 2021 a</string>
     <string name="hola_mundo">Hola Mundo</string>
+
 
 </resources>
