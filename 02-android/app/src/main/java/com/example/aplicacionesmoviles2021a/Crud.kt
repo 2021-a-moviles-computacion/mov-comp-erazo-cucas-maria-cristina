@@ -19,14 +19,16 @@ class Crud : AppCompatActivity() {
 
         val botonConsultar = findViewById<Button>(R.id.btn_consultar)
         botonConsultar.setOnClickListener{
-            val usuarioEncontrado = EBaseDeDatos?.TablaUsuario?.consultarUsuarioPorId(5)
+            val usuarioEncontrado = EBaseDeDatos?.TablaUsuario?.consultarUsuarioPorId(30)
             Log.i("bdd", "id:${usuarioEncontrado?.id} Nombre:${usuarioEncontrado?.nombre}"+
                     "Descripcion: ${usuarioEncontrado?.descripcion}")
         }
 
         val botonCrear = findViewById<Button>(R.id.btn_guardar)
         botonCrear.setOnClickListener{
-            val resultado = EBaseDeDatos.TablaUsuario?.crearUsuarioFormulario("${txtNombre.text.toString()}","${txtDescripcion.text.toString()}")
+
+            //val resultado = EBaseDeDatos.TablaUsuario?.crearUsuarioFormulario("${txtNombre.text.toString()}","${txtDescripcion.text.toString()}")
+           val resultado = EBaseDeDatos.TablaUsuario?.crearUsuarioFormulario("MarC","HOLA QUE TAL")
             if(resultado != null){
                 if(resultado){
                     Log.i("bdd","El registro se ha creado")
@@ -41,7 +43,8 @@ class Crud : AppCompatActivity() {
 
         val botonActualizar= findViewById<Button>(R.id.btn_actualizar)
         botonActualizar.setOnClickListener{
-            val resultado = EBaseDeDatos.TablaUsuario?.actualizarUsuarioFormulario("${txtNombre.text.toString()}", "${txtDescripcion.text.toString()}",1)
+           // val resultado = EBaseDeDatos.TablaUsuario?.actualizarUsuarioFormulario("${txtNombre.text.toString()}", "${txtDescripcion.text.toString()}",1)
+            val resultado = EBaseDeDatos.TablaUsuario?.actualizarUsuarioFormulario("cristina", "soy tu amiga",30)
             if(resultado != null){
                 if(resultado){
                     Log.i("bdd","Actualizacion exitosa")
@@ -56,7 +59,7 @@ class Crud : AppCompatActivity() {
 
         val botonEliminar = findViewById<Button>(R.id.btn_eliminar)
         botonEliminar.setOnClickListener{
-            val resultado= EBaseDeDatos.TablaUsuario?.eliminarUsuarioFormulari(1)
+            val resultado= EBaseDeDatos.TablaUsuario?.eliminarUsuarioFormulari(30)
             if(resultado != null){
                 if(resultado){
                     Log.i("bdd","Eliminacion exitosa")
