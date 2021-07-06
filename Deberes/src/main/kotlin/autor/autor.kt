@@ -84,7 +84,7 @@ fun registrarAutor(): Autor? {
     try {
         println("Ingrese el id del autor")
         id = readLine()?.toInt() as Int
-        println("Ingrese el nombre (Solo letras)")
+        println("Ingrese el nombre del autor")
         nombre = readLine() as String
         println("Ingrese el pais")
         pais = readLine() as String
@@ -121,7 +121,7 @@ fun actualizarAutor(
     var flag = true
 
     try {
-        println("Ingrese el nuevo nombre (Solo letras)")
+        println("Ingrese el nuevo nombre ")
         nombre = readLine() as String
         println("Ingrese el nuevo pais ")
         pais = readLine() as String

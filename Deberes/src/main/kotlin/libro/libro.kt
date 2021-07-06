@@ -9,7 +9,10 @@ fun cargarLibros(): ArrayList<Libro> {
     val listaLibros: ArrayList<Libro> = ArrayList()
 
 
+
+
     try {
+
         archivoLibros = File("libros.csv")
         frLibros = FileReader(archivoLibros)
         brLibros = BufferedReader(frLibros)
@@ -27,7 +30,7 @@ fun cargarLibros(): ArrayList<Libro> {
             var titulo = ""
             var tipo = ' '
             var publicacion = Date(2000, 1, 1)
-            var cargaAire = true
+            var vendido = true
 
 
             val tokens = StringTokenizer(linea, ",")
@@ -65,9 +68,9 @@ fun cargarLibros(): ArrayList<Libro> {
                     4 -> {
                         val a = tokens.nextToken()
                         if (a == "true") {
-                            cargaAire = true
+                            vendido = true
                         } else if (a == "false") {
-                            cargaAire = false
+                            vendido = false
                         }
 
                     }
@@ -81,7 +84,7 @@ fun cargarLibros(): ArrayList<Libro> {
                     titulo,
                     tipo,
                     publicacion,
-                    cargaAire
+                    vendido
                 )
             )
 
@@ -116,13 +119,13 @@ fun registrarLibro(): Libro? {
     try {
         println("Ingrese el id del libro")
         idLibro = readLine() as String
-        println("Ingrese el nombre del libro (Solo letras)")
+        println("Ingrese el nombre del libro ")
         tituloLibro = readLine() as String
-        println("Ingrese el tipo de libro ( A= ACCION  - C=COMEDIA D= DRAMA )")
+        println("Ingrese el tipo de libro con la letra inicial por ejemplo ROMANCE R")
         tipoLibro = readLine()?.toCharArray()?.get(0)
         println("Ingrese la fecha de publicacion del libro aaaa/mm/dd")
         fechaPublicacionLibro = readLine()
-        println("Por defecto la serie registrada estará como \"Al aire\"")
+        println("Por defecto el libro registrada estará como \"VENDIDO\"")
 
 
         val tokFecha = StringTokenizer(fechaPublicacionLibro, "/")
@@ -186,9 +189,9 @@ fun actualizarLibros(
     var mesLibro = 0
     var anioLibro = 0
     try {
-        println("Ingrese el nuevo nombre del libro (Solo letras)")
+        println("Ingrese el nuevo nombre del libro ")
         nombreLibro = readLine() as String
-        println("Ingrese el tipo de libro ( A - B - C )")
+        println("Ingrese el tipo de libro por ejemplo R  de romance")
         tipoLibro = readLine()?.toCharArray()?.get(0)
         println("Ingrese la fecha de publicacion del libro aaaa/mm/dd")
         fechaPublicacionLibro = readLine()
@@ -211,7 +214,7 @@ fun actualizarLibros(
 
         println(
             "¿Desea cambiar el estado de la serie?\n" +
-                    "Estado actual: ${libro?.alAireLibro}\n" +
+                    "Estado actual: ${libro?.vendido}\n" +
                     "Ingrese 1 si desea Activarlo\n" +
                     "Ingrese 0 si desea Desactivarlo"
         )
@@ -246,7 +249,7 @@ fun guardarLibros(
                 "${libro.tituloLibro}," +
                 "${libro.tipoLibro}," +
                 "${libro.fechaPublicacionLibro?.year}/${libro.fechaPublicacionLibro?.month}/${libro.fechaPublicacionLibro?.date}," +
-                "${libro.alAireLibro}\n"
+                "${libro.vendido}\n"
     }
     var flwriter: FileWriter? = null
     try {
@@ -275,7 +278,7 @@ class Libro(
     val tituloLibro: String?,
     val tipoLibro: Char?,
     val fechaPublicacionLibro: Date?,
-    val alAireLibro: Boolean?
+    val vendido: Boolean?
 
 ) {
 
@@ -284,6 +287,6 @@ class Libro(
                 "\tNombre: \t$tituloLibro\n" +
                 "\tClasificación: \t$tipoLibro\n" +
                 "\tFecha de Inicio:  ( ${fechaPublicacionLibro?.year} / ${fechaPublicacionLibro?.month} / ${fechaPublicacionLibro?.date} )\n" +
-                "\tTransmitiendo: \t$alAireLibro\n"
+                "\tVendido: \t$vendido\n"
     }
 }

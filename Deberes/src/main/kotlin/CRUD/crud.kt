@@ -6,16 +6,15 @@ fun crear(
     println(
         "Desea Ingresar: " +
                 "\n1- Libros" +
-                "\n2- Autores" +
-                "\n3- Reparto"
+                "\n2- Autores"
     )
     try {
         when (readLine()?.toInt() as Int) {
             1 -> {
-                opcionC1(listaLibros)
+                crearUno(listaLibros)
             }
             2 -> {
-                opcionC2(listaAutores)
+                crearDos(listaAutores)
             }
 
             else -> {
@@ -28,7 +27,7 @@ fun crear(
 
 }
 
-fun opcionC1(
+fun crearUno(
     listaLibros: ArrayList<Libro>
 ){
     val libroAux: Libro? = registrarLibro()
@@ -38,7 +37,7 @@ fun opcionC1(
     }
 }
 
-fun opcionC2(
+fun crearDos(
     listaAutores: ArrayList<Autor>
 ){
     val autorAux: Autor? = registrarAutor()
@@ -70,10 +69,10 @@ fun borrar(
     try {
         when (readLine()?.toInt() as Int) {
             1 -> {
-                opcionD1(listaLibros, listaAutores)
+                eliminarUno(listaLibros, listaAutores)
             }
             2 -> {
-                opcionD2(listaAutores)
+                eliminarDos(listaAutores)
             }
             else -> imprimirError(0)
         }
@@ -82,7 +81,7 @@ fun borrar(
     }
 }
 
-fun opcionD1(
+fun eliminarUno(
     listaLibros: ArrayList<Libro>,
     listaAutores: ArrayList<Autor>
 ){
@@ -96,9 +95,9 @@ fun opcionD1(
             println(libroID)
             try {
                 println(
-                    "¿Está seguro de eliminar la serie?\n" +
+                    "¿Está seguro de eliminar del libro?\n" +
                             "Ingrese 1 si está seguro\n" +
-                            "Ingrese 0 si no desea eliminarla"
+                            "Ingrese 0 si no desea eliminarlo"
                 )
                 confirmacion = readLine()
                 if (confirmacion.equals("1")) {
@@ -122,7 +121,7 @@ fun opcionD1(
     }
 }
 
-fun opcionD2(
+fun eliminarDos(
     listaAutores: ArrayList<Autor>,
    // listaReparto: ArrayList<Reparto>
 ){
@@ -137,7 +136,7 @@ fun opcionD2(
             println(actorID)
             try {
                 println(
-                    "¿Está seguro de eliminar el actor?\n" +
+                    "¿Está seguro de eliminar el autor?\n" +
                             "Ingrese 1 si está seguro\n" +
                             "Ingrese 0 si no desea eliminarlo"
                 )
@@ -181,10 +180,10 @@ fun actualizar(
 
         when (readLine()?.toInt() as Int) {
             1 -> {
-                opcionU1(listaLibros)
+                actualizarUno(listaLibros)
             }
             2 -> {
-                opcionU2(listaAutores)
+                actualizarDos(listaAutores)
             }
             else -> {
                 imprimirError(0)
@@ -195,7 +194,7 @@ fun actualizar(
     }
 }
 
-fun opcionU1(
+fun actualizarUno(
     listaLibros: ArrayList<Libro>,
   //  listaAutores: ArrayList<Autor>
 ){
@@ -235,7 +234,7 @@ fun opcionU1(
 //                        )
 //                    )
                     println(
-                        "Nueva información:\n" +
+                        "Informacion Actualizada:\n" +
                                 "+${updateLibro}"
                     )
                     imprimirExito(2)
@@ -249,9 +248,9 @@ fun opcionU1(
     }
 }
 
-fun opcionU2(
+fun actualizarDos(
     listaAutores: ArrayList<Autor>,
-  //  listaReparto: ArrayList<Reparto>
+
 ){
     println("Ingrese el id del autor que desea actualizar\n")
     try {
@@ -278,19 +277,9 @@ fun opcionU2(
                 listaAutores.removeIf { reparto ->
                     reparto.idAutor == updateAutor.idAutor
                 }
-//                listaAutores.add(
-//                   Autor(
-//                        repartoAux!!.paisAutor,
-//                        updateAutor
 //
-//                        updateAutor,
-//                        repartoAux!!.edadActor,
-//                        repartoAux!!.comentario
-//                    )
-//                )
-                //---------------------------------
                 println(
-                    "Nueva información:\n" +
+                    "Informacion actualizada:\n" +
                             "+${updateAutor}"
                 )
             }
@@ -337,22 +326,12 @@ fun leer(
     }
 }
 
-//fun imprimirLibroReparto(
-  //  listaRepartos: ArrayList<Reparto>,
-  //  idLibro: String?
-//) {
- //   listaRepartos.forEach { reparto ->
-   //     if (reparto.serie.idSerie.equals(idLibro)) {
-     //       println("Valor: $reparto")
-      //  }
 
-    //}
-//}
 
 fun opcionR1(
     listaLibros: ArrayList<Libro>
 ){
-    println("Lista Series")
+    println("Lista Libros")
     imprimirLibros(listaLibros)
     imprimirExito(1)
 }

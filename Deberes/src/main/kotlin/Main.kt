@@ -1,5 +1,3 @@
-import java.util.*
-import java.io.*
 import kotlin.collections.ArrayList
 import kotlin.system.exitProcess
 
@@ -8,21 +6,21 @@ fun main() {
     //Creacion de listas y carga inicial
     val listaLibros: ArrayList<Libro> = cargarLibros()
     val listaAutores: ArrayList<Autor> = cargarAutores()
-    //val listaReparto: ArrayList<Reparto> =
-    //    cargarRepartos(listaLibros, listaAutores)
+
 
     var seleccion:Int
 
 
-    println("Bienvenid@ al sistema de registro de series")
+    println("LIBROS Y AUTORES")
     do {
         println("Seleccione una opción: ")
         println(
-            "1- Ingresar una nueva serie, actor o reparto (Create)\n" +
-                    "2- Mostrar series, actores o reparto (Read)\n" +
-                    "3- Actualizar una serie o actor (Update)\n" +
-                    "4- Eliminar una serie o actor (Delete)\n" +
+            "1- Ingresar una nuevo libro, o autor\n" +
+                    "2- Mostrar libros o autores\n" +
+                    "3- Actualizar un libro o autor \n" +
+                    "4- Eliminar una libro o autor \n" +
                     "Ingrese 5 si desea salir del programa.\n"
+
         )
         try {
             seleccion = readLine()?.toInt() as Int
@@ -42,7 +40,7 @@ fun main() {
                 5 -> {
                     guardarLibros(listaLibros)
                     guardarAutores(listaAutores)
-                  //  guardarRepartos(listaReparto)
+
                     exitProcess(0)
                 }
                 else -> imprimirError(0)
@@ -64,9 +62,9 @@ fun imprimirExito(opcion: Int = 0) {
     when (opcion) {
         0 -> {
             println(
-                "****************\n" +
-                        "Registro exitoso\n" +
-                        "****************"
+                "###################\n" +
+                        "Se ha guardado exitosamente\n" +
+                        "###################"
             )
         }
         1 -> {
@@ -78,20 +76,20 @@ fun imprimirExito(opcion: Int = 0) {
         }
         2 -> {
             println(
-                "*********************\n" +
+                "###################\n" +
                         "Actualización exitosa\n" +
-                        "*********************"
+                        "###################"
             )
         }
         else -> {
             println(
-                "*****************\n" +
+                "###################\n" +
                         "Error desconocido\n" +
-                        "*****************"
+                        "###################"
             )
         }
     }
-    println("Presione cualquier tecla para continuar")
+
     readLine()
 }
 
@@ -106,16 +104,16 @@ fun imprimirError(opcion: Int = 0) {
         }
         1 -> {
             println(
-                "*****************************************************************************\n" +
+                "#######################################################################################\n" +
                         "La opcion ingresada no es correcta, revise si ingresó un caracter no numérico\n" +
-                        "*****************************************************************************"
+                        "################################################################################"
             )
         }
         2 -> {
             println(
-                "**********************\n" +
+                "###################\n" +
                         "Elemento no encontrado\n" +
-                        "**********************"
+                        "###################"
             )
         }
         3 -> {
@@ -133,7 +131,7 @@ fun imprimirError(opcion: Int = 0) {
             )
         }
     }
-    println("Presione cualquier tecla para continuar")
+
     readLine()
 }
 
@@ -153,11 +151,11 @@ fun buscarLibroID(
 
 fun buscarAutorID(
     listaAutores: ArrayList<Autor>,
-    idActor: Int
+    idAutor: Int
 ): Autor? {
     var autorRespuesta: Autor? = null
     listaAutores.forEach { actor ->
-        if (actor.idAutor == idActor) {
+        if (actor.idAutor == idAutor) {
             autorRespuesta = actor
         }
     }
