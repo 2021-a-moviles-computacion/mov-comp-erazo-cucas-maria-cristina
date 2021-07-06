@@ -66,7 +66,7 @@ class ESqliteHelperUsuario(
                 val nombre = resultaConsultaLectura.getString(1) // Columna indice 1 -> NOMBRE
                 val descripcion =
                     resultaConsultaLectura.getString(2) // Columna indice 2 -> DESCRIPCION
-                if(id!=null){
+                if (id != null) {
                     usuarioEncontrado.id = id
                     usuarioEncontrado.nombre = nombre
                     usuarioEncontrado.descripcion = descripcion
@@ -80,4 +80,45 @@ class ESqliteHelperUsuario(
     }
 
 
+    fun eliminarUsuarioFormulari(id: Int): Boolean {
+      //  val conexionEscritura = this.writableDatabase
+        val conexionEscritura= writableDatabase
+        val resultadoEliminacion = conexionEscritura
+            .delete(
+                "USUARIO",
+                "id=?",
+                arrayOf(
+                    id.toString()
+                )
+            )
+        conexionEscritura.close()
+        return if (resultadoEliminacion.toInt()==-1)false else true
+
+    }
+
+    fun actualizarUsuarioFormulario(
+        nombre: String,
+        descripcion: String,
+        idActualizar: Int
+    ): Boolean{
+        val conexionEscritura= writableDatabase
+        val valoresActualizar= ContentValues()
+        valoresActualizar.put("nombre", nombre)
+        valoresActualizar.put("descripcion", descripcion)
+        val resultadoActualizacion= conexionEscritura
+            .update(
+                "USUARIO",
+                valoresActualizar,
+                "id=?",
+                arrayOf (
+                        idActualizar.toString()
+                )//parametros clausula where
+
+            )
+        conexionEscritura.close()
+        return if(resultadoActualizacion==-1)false else true
+
+    }
+
     override fun onUpgrade(p0: SQLiteDatabase?, p1: Int, p2: Int) {}
+}

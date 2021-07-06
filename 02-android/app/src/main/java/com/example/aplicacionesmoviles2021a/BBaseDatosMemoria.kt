@@ -6,10 +6,7 @@ class BBaseDatosMemoria {
     }
     init{
         arregloBEntrenador
-            .add(
-                BEntrenador("Adrian","a@a.com")
-
-            )
+            .add(BEntrenador("Adrian","a@a.com"))
         arregloBEntrenador
             .add(
                 BEntrenador("Joseph","b@b.com")
