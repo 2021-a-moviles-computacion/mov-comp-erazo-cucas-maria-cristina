@@ -52,7 +52,17 @@ class MainActivity : AppCompatActivity() {
         val botorIrUsuario= findViewById<Button>(R.id.btn_ir_usuario)
         botorIrUsuario.setOnClickListener{abrirActividad(Crud::class.java)}
 
+        val botonAbrirRecyclerView= findViewById<Button>(R.id.btn_ir_recycler_view)
+            botonAbrirRecyclerView
+                .setOnClickListener{
+                    abrirActividadConParametros(GRecyclerView::class.java)
+                }
 
+        val botonirHTTP= findViewById<Button>(R.id.btn_ir_http)
+        botonirHTTP
+            .setOnClickListener{
+                abrirActividadConParametros(HTTPActivity::class.java)
+            }
 
 
 
@@ -78,13 +88,13 @@ class MainActivity : AppCompatActivity() {
             this,
             clase
         )
-        intentExplicito.putExtra("nombre", "Adrian")
-        intentExplicito.putExtra("apellido", "Eguez")
-        intentExplicito.putExtra("edad", 32)
-        intentExplicito.putExtra(
-            "entrenador",
-            BEntrenador("Adrian", "Eguez")
-        )
+//        intentExplicito.putExtra("nombre", "Adrian")
+//        intentExplicito.putExtra("apellido", "Eguez")
+//        intentExplicito.putExtra("edad", 32)
+//        intentExplicito.putExtra(
+//            "entrenador",
+//            BEntrenador("Adrian", "Eguez")
+//        )
         startActivityForResult(intentExplicito, CODIGO_RESPUESTA_INTENT_EXPLICITO)
 
 //        registerForActivityResult(ActivityResultContracts.StartActivityForResult()){
@@ -114,7 +124,9 @@ class MainActivity : AppCompatActivity() {
                             data.getParcelableExtra<BEntrenador>("entrenadorModificado")
                         Log.i("intent-explicito", "${nombre}")
                         Log.i("intent-explicito", "${edad}")
-                        Log.i("intent-explicito", "${entrenador}")
+                        if (entrenador != null) {
+                            Log.i("intent-explicito", "${entrenador.nombre}")
+                        }
                     }
                 }
             }

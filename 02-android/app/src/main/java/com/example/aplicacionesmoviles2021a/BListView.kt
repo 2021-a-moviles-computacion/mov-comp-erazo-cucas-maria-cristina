@@ -80,7 +80,7 @@ class BListView : AppCompatActivity() {
 
                 return@setOnItemLongClickListener true
             }
-//        registerForContextMenu(listViewEjemplo)
+        registerForContextMenu(listViewEjemplo)
 
     }
 
