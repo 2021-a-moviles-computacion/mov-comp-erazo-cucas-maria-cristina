@@ -1,0 +1,71 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".CrearCanciones">
+
+    <EditText
+        android:id="@+id/txt_idCancion"
+        android:layout_width="351dp"
+        android:layout_height="63dp"
+        android:ems="10"
+        android:hint="ID:"
+        android:inputType="textPersonName"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintVertical_bias="0.058" />
+
+    <EditText
+        android:id="@+id/txtTitulo"
+        android:layout_width="355dp"
+        android:layout_height="82dp"
+        android:layout_marginTop="36dp"
+        android:ems="10"
+        android:hint="TITULO:"
+        android:inputType="textPersonName"
+        app:layout_constraintEnd_toEndOf="@+id/txt_idCancion"
+        app:layout_constraintHorizontal_bias="0.555"
+        app:layout_constraintStart_toStartOf="@+id/txt_idCancion"
+        app:layout_constraintTop_toBottomOf="@+id/txt_idCancion" />
+
+    <EditText
+        android:id="@+id/txtGenero"
+        android:layout_width="338dp"
+        android:layout_height="78dp"
+        android:layout_marginTop="36dp"
+        android:ems="10"
+        android:hint="GENERO:"
+        android:inputType="textPersonName"
+        app:layout_constraintEnd_toEndOf="@+id/txtTitulo"
+        app:layout_constraintHorizontal_bias="0.0"
+        app:layout_constraintStart_toStartOf="@+id/txtTitulo"
+        app:layout_constraintTop_toBottomOf="@+id/txtTitulo" />
+
+    <EditText
+        android:id="@+id/txtDuracion"
+        android:layout_width="338dp"
+        android:layout_height="80dp"
+        android:layout_marginTop="40dp"
+        android:ems="10"
+        android:hint="DURACION:"
+        android:inputType="textPersonName"
+        app:layout_constraintEnd_toEndOf="@+id/txtGenero"
+        app:layout_constraintHorizontal_bias="1.0"
+        app:layout_constraintStart_toStartOf="@+id/txtGenero"
+        app:layout_constraintTop_toBottomOf="@+id/txtGenero" />
+
+    <Button
+        android:id="@+id/btn_guardarCancion"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="44dp"
+        android:text="GUARDAR"
+        app:layout_constraintEnd_toEndOf="@+id/txtDuracion"
+        app:layout_constraintHorizontal_bias="0.532"
+        app:layout_constraintStart_toStartOf="@+id/txtDuracion"
+        app:layout_constraintTop_toBottomOf="@+id/txtDuracion" />
+</androidx.constraintlayout.widget.ConstraintLayout>
