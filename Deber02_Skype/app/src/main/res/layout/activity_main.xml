@@ -1,0 +1,61 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="#50B9C6"
+    android:backgroundTintMode="add"
+    tools:context=".MainActivity">
+
+    <Button
+        android:id="@+id/btn_iniciarSesion"
+        android:layout_width="284dp"
+        android:layout_height="52dp"
+        android:layout_marginBottom="112dp"
+        android:backgroundTint="#FDFDFD"
+        android:text="Iniciar sesión"
+        android:textAllCaps="false"
+        android:textColor="#050505"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="@+id/imageView21"
+        app:layout_constraintHorizontal_bias="0.512"
+        app:layout_constraintStart_toStartOf="@+id/imageView21" />
+
+    <Button
+        android:id="@+id/btn_crearCuenta"
+        android:layout_width="284dp"
+        android:layout_height="52dp"
+        android:layout_marginTop="4dp"
+        android:backgroundTint="#30B4C5"
+        android:text="Crear cuenta"
+        android:textAllCaps="false"
+        app:layout_constraintEnd_toEndOf="@+id/btn_iniciarSesion"
+        app:layout_constraintHorizontal_bias="0.0"
+        app:layout_constraintStart_toStartOf="@+id/btn_iniciarSesion"
+        app:layout_constraintTop_toBottomOf="@+id/btn_iniciarSesion" />
+
+    <TextView
+        android:id="@+id/textView26"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="8dp"
+        android:text="Tienes problemas para iniciar sesión? "
+        android:textColor="#FFFFFF"
+        android:textSize="12sp"
+        app:layout_constraintEnd_toEndOf="@+id/btn_crearCuenta"
+        app:layout_constraintHorizontal_bias="0.493"
+        app:layout_constraintStart_toStartOf="@+id/btn_crearCuenta"
+        app:layout_constraintTop_toBottomOf="@+id/btn_crearCuenta" />
+
+    <ImageView
+        android:id="@+id/imageView21"
+        android:layout_width="407dp"
+        android:layout_height="533dp"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintVertical_bias="0.0"
+        app:srcCompat="@drawable/funxf" />
+
+</androidx.constraintlayout.widget.ConstraintLayout>

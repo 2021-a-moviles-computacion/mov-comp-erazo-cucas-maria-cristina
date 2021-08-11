@@ -1,0 +1,278 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:backgroundTint="#A5DDF6">
+
+    <Button
+        android:id="@+id/btn_mensajito2"
+        android:layout_width="267dp"
+        android:layout_height="69dp"
+        android:layout_marginTop="12dp"
+        android:backgroundTint="#8FD1EF"
+        android:text="hola Marce acabo de leer el msj, recien llegue a casa"
+        android:textColor="#040404"
+        app:layout_constraintEnd_toEndOf="@+id/textView18"
+        app:layout_constraintHorizontal_bias="1.0"
+        app:layout_constraintStart_toStartOf="@+id/textView18"
+        app:layout_constraintTop_toBottomOf="@+id/textView18" />
+
+    <TextView
+        android:id="@+id/textView18"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="8dp"
+        android:backgroundTint="#EFF5F8"
+        android:text="3:30 PM"
+        app:layout_constraintEnd_toEndOf="@+id/button7"
+        app:layout_constraintHorizontal_bias="1.0"
+        app:layout_constraintStart_toStartOf="@+id/button7"
+        app:layout_constraintTop_toBottomOf="@+id/button7" />
+
+    <Button
+        android:id="@+id/button7"
+        android:layout_width="272dp"
+        android:layout_height="83dp"
+        android:layout_marginTop="28dp"
+        android:backgroundTint="#EFF5F8"
+        android:text="Hola Mari ya te desocuaste de tu estudio de ingles"
+        android:textColor="#040404"
+        app:layout_constraintEnd_toEndOf="@+id/textView17"
+        app:layout_constraintHorizontal_bias="0.0"
+        app:layout_constraintStart_toStartOf="@+id/textView17"
+        app:layout_constraintTop_toTopOf="@+id/textView17" />
+
+    <ImageView
+        android:id="@+id/tv_atras_listaContactos"
+        android:layout_width="86dp"
+        android:layout_height="36dp"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.0"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintVertical_bias="0.038"
+        app:srcCompat="@drawable/atras" />
+
+    <TextView
+        android:id="@+id/tv_nombre"
+        android:layout_width="218dp"
+        android:layout_height="44dp"
+        android:layout_marginStart="28dp"
+        android:text="Marcela Sampedro"
+        android:textColor="#000000"
+        android:textSize="20sp"
+        android:textStyle="bold"
+        app:layout_constraintBottom_toBottomOf="@+id/tv_atras_listaContactos"
+        app:layout_constraintStart_toEndOf="@+id/tv_atras_listaContactos"
+        app:layout_constraintTop_toTopOf="@+id/tv_atras_listaContactos"
+        app:layout_constraintVertical_bias="1.0" />
+
+    <TextView
+        android:id="@+id/tv_ultimavez"
+        android:layout_width="164dp"
+        android:layout_height="20dp"
+        android:layout_marginTop="12dp"
+        android:text="Visto 3:15"
+        app:layout_constraintEnd_toEndOf="@+id/tv_nombre"
+        app:layout_constraintHorizontal_bias="0.0"
+        app:layout_constraintStart_toStartOf="@+id/tv_nombre"
+        app:layout_constraintTop_toBottomOf="@+id/tv_nombre" />
+
+    <TextView
+        android:id="@+id/tv_ultimavezMensaje"
+        android:layout_width="358dp"
+        android:layout_height="26dp"
+        android:text="lunes, julio 23, 2021"
+        android:textAlignment="center"
+        app:layout_constraintEnd_toEndOf="@+id/imageView52"
+        app:layout_constraintStart_toStartOf="@+id/imageView52"
+        app:layout_constraintTop_toBottomOf="@+id/imageView52" />
+
+    <ImageView
+        android:id="@+id/imageView8"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        app:layout_constraintEnd_toEndOf="@+id/tv_ultimavezMensaje"
+        app:layout_constraintHorizontal_bias="0.0"
+        app:layout_constraintStart_toStartOf="@+id/tv_ultimavezMensaje"
+        app:layout_constraintTop_toBottomOf="@+id/tv_ultimavezMensaje"
+        app:srcCompat="@drawable/contacto2" />
+
+    <TextView
+        android:id="@+id/tv_nombreReceptor"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Marcela, 10:39 AM"
+        app:layout_constraintBottom_toBottomOf="@+id/imageView8"
+        app:layout_constraintEnd_toEndOf="@+id/tv_ultimavezMensaje"
+        app:layout_constraintHorizontal_bias="0.096"
+        app:layout_constraintStart_toEndOf="@+id/imageView8"
+        app:layout_constraintTop_toTopOf="@+id/imageView8"
+        app:layout_constraintVertical_bias="0.0" />
+
+    <TextView
+        android:id="@+id/textView17"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="28dp"
+        android:text="Marcela, 12:09 PM"
+        app:layout_constraintBottom_toBottomOf="@+id/imageView10"
+        app:layout_constraintStart_toEndOf="@+id/imageView10"
+        app:layout_constraintTop_toTopOf="@+id/imageView10"
+        app:layout_constraintVertical_bias="0.0" />
+
+    <Button
+        android:id="@+id/tv_mensaje1"
+        android:layout_width="118dp"
+        android:layout_height="42dp"
+        android:layout_marginTop="8dp"
+        android:backgroundTint="#EFF5F8"
+        android:text="hola"
+        android:textColor="#040404"
+        app:layout_constraintEnd_toEndOf="@+id/tv_nombreReceptor"
+        app:layout_constraintHorizontal_bias="0.0"
+        app:layout_constraintStart_toStartOf="@+id/tv_nombreReceptor"
+        app:layout_constraintTop_toBottomOf="@+id/tv_nombreReceptor" />
+
+    <TextView
+        android:id="@+id/textView15"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:backgroundTint="#EFF5F8"
+        android:text="8:55 PM"
+        app:layout_constraintEnd_toEndOf="@+id/imageView9"
+        app:layout_constraintHorizontal_bias="0.0"
+        app:layout_constraintStart_toStartOf="@+id/imageView9"
+        app:layout_constraintTop_toBottomOf="@+id/imageView9" />
+
+    <Button
+        android:id="@+id/tv_mensaje2"
+        android:layout_width="148dp"
+        android:layout_height="49dp"
+        android:layout_marginTop="16dp"
+        android:backgroundTint="#8FD1EF"
+        android:text="hola Marce"
+        android:textColor="#040404"
+        app:layout_constraintEnd_toEndOf="@+id/textView15"
+        app:layout_constraintHorizontal_bias="0.0"
+        app:layout_constraintStart_toStartOf="@+id/textView15"
+        app:layout_constraintTop_toBottomOf="@+id/textView15" />
+
+    <ImageView
+        android:id="@+id/imageView9"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="20dp"
+        app:layout_constraintBottom_toBottomOf="@+id/tv_mensaje1"
+        app:layout_constraintStart_toEndOf="@+id/tv_mensaje1"
+        app:layout_constraintTop_toBottomOf="@+id/tv_nombreReceptor"
+        app:layout_constraintVertical_bias="0.333"
+        app:srcCompat="@drawable/emoticon" />
+
+    <ImageView
+        android:id="@+id/imageView10"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="12dp"
+        app:layout_constraintEnd_toEndOf="@+id/imageView53"
+        app:layout_constraintHorizontal_bias="0.044"
+        app:layout_constraintStart_toStartOf="@+id/imageView53"
+        app:layout_constraintTop_toBottomOf="@+id/imageView53"
+        app:srcCompat="@drawable/contacto2" />
+
+    <ImageButton
+        android:id="@+id/btn_adjuntarArchivos"
+        android:layout_width="54dp"
+        android:layout_height="44dp"
+        android:layout_marginTop="12dp"
+        android:backgroundTint="#FFFFFF"
+        app:layout_constraintEnd_toEndOf="@+id/imageView54"
+        app:layout_constraintHorizontal_bias="0.019"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/imageView54"
+        app:srcCompat="@drawable/mas" />
+
+    <EditText
+        android:id="@+id/editTextTextPersonName2"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:ems="10"
+        android:hint="Mensaje"
+        android:inputType="textPersonName"
+        app:layout_constraintBottom_toBottomOf="@+id/btn_adjuntarArchivos"
+        app:layout_constraintStart_toEndOf="@+id/btn_adjuntarArchivos"
+        app:layout_constraintTop_toTopOf="@+id/btn_adjuntarArchivos"
+        app:layout_constraintVertical_bias="1.0" />
+
+    <ImageView
+        android:id="@+id/imageView13"
+        android:layout_width="33dp"
+        android:layout_height="28dp"
+        android:layout_marginTop="8dp"
+        app:layout_constraintEnd_toEndOf="@+id/editTextTextPersonName2"
+        app:layout_constraintHorizontal_bias="0.988"
+        app:layout_constraintStart_toEndOf="@+id/btn_adjuntarArchivos"
+        app:layout_constraintTop_toTopOf="@+id/editTextTextPersonName2"
+        app:srcCompat="@drawable/emoticon" />
+
+    <ImageButton
+        android:id="@+id/imageButton3"
+        android:layout_width="54dp"
+        android:layout_height="44dp"
+        android:layout_marginStart="24dp"
+        android:backgroundTint="#FFFFFF"
+        app:layout_constraintBottom_toBottomOf="@+id/editTextTextPersonName2"
+        app:layout_constraintStart_toEndOf="@+id/editTextTextPersonName2"
+        app:layout_constraintTop_toTopOf="@+id/editTextTextPersonName2"
+        app:layout_constraintVertical_bias="1.0"
+        app:srcCompat="@drawable/grabar_audio" />
+
+    <ImageButton
+        android:id="@+id/imageButton6"
+        android:layout_width="54dp"
+        android:layout_height="44dp"
+        android:layout_marginStart="52dp"
+        android:backgroundTint="#FFFFFF"
+        app:layout_constraintBottom_toBottomOf="@+id/imageButton3"
+        app:layout_constraintStart_toStartOf="@+id/imageButton3"
+        app:layout_constraintTop_toTopOf="@+id/imageButton3"
+        app:layout_constraintVertical_bias="0.0"
+        app:srcCompat="@drawable/mandar_foto" />
+
+    <ImageView
+        android:id="@+id/imageView52"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="12dp"
+        app:layout_constraintEnd_toEndOf="@+id/tv_ultimavez"
+        app:layout_constraintHorizontal_bias="0.461"
+        app:layout_constraintStart_toStartOf="@+id/tv_ultimavez"
+        app:layout_constraintTop_toBottomOf="@+id/tv_ultimavez"
+        app:srcCompat="@drawable/linea_separacion" />
+
+    <ImageView
+        android:id="@+id/imageView53"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="8dp"
+        app:layout_constraintEnd_toEndOf="@+id/tv_mensaje2"
+        app:layout_constraintHorizontal_bias="0.904"
+        app:layout_constraintStart_toStartOf="@+id/tv_mensaje2"
+        app:layout_constraintTop_toBottomOf="@+id/tv_mensaje2"
+        app:srcCompat="@drawable/linea_separacion" />
+
+    <ImageView
+        android:id="@+id/imageView54"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="4dp"
+        app:layout_constraintEnd_toEndOf="@+id/btn_mensajito2"
+        app:layout_constraintHorizontal_bias="0.715"
+        app:layout_constraintStart_toStartOf="@+id/btn_mensajito2"
+        app:layout_constraintTop_toBottomOf="@+id/btn_mensajito2"
+        app:srcCompat="@drawable/linea_separacion" />
+
+</androidx.constraintlayout.widget.ConstraintLayout>
