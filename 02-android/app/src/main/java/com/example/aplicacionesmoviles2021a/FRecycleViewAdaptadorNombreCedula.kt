@@ -1,5 +1,6 @@
 package com.example.aplicacionesmoviles2021a
 
+import android.content.Intent
 import android.view.LayoutInflater
 import android.view.View
 import android.view.ViewGroup
@@ -38,6 +39,7 @@ class FRecycleViewAdaptadorNombreCedula(
             likesTextView.text= this.numeroLikes.toString()
             contexto.aumentarTotalLikes()
         }
+
 
     }
 

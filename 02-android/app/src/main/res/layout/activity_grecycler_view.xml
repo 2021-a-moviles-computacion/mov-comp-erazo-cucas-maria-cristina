@@ -20,9 +20,9 @@
 
     <androidx.recyclerview.widget.RecyclerView
         android:id="@+id/rv_entrenadores"
-        android:layout_width="236dp"
-        android:layout_height="417dp"
-        android:layout_marginTop="236dp"
+        android:layout_width="349dp"
+        android:layout_height="402dp"
+        android:layout_marginTop="176dp"
         app:layout_constraintEnd_toEndOf="@+id/textView9"
         app:layout_constraintHorizontal_bias="0.481"
         app:layout_constraintStart_toStartOf="@+id/textView9"
