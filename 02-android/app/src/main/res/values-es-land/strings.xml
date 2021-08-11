@@ -1,0 +1,6 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <string name="hola_mundo">
+        <font color = "#3F58DD">DRAGON BALL</font>
+    </string>
+</resources>

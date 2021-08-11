@@ -1,0 +1,11 @@
+<resources>
+    <string name="app_name" translatable="false">aplicaciones moviles 2021 a</string>
+    <string name="hola_mundo">Hola Mundo</string>
+    <string-array name="string_array_opciones_dialogo">
+        <item>1</item>
+        <item>2</item>
+        <item>3</item>
+    </string-array>
+
+
+</resources>

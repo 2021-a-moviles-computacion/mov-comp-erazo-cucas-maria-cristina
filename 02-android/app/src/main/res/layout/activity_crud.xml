@@ -1,0 +1,83 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".Crud">
+
+    <EditText
+        android:id="@+id/txtNombre"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:ems="10"
+        android:hint="Nombre:"
+        android:inputType="textPersonName"
+        android:textSize="14sp"
+        app:layout_constraintTop_toBottomOf="@+id/txtId"
+        tools:layout_editor_absoluteX="36dp" />
+
+    <EditText
+        android:id="@+id/txtId"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="36dp"
+        android:ems="10"
+        android:hint="Id:"
+        android:inputType="textPersonName"
+        android:textSize="14sp"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent" />
+
+    <EditText
+        android:id="@+id/txtDescripcion"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:ems="10"
+        android:hint="Descripcion:"
+        android:inputType="textPersonName"
+        android:textSize="14sp"
+        app:layout_constraintTop_toBottomOf="@+id/txtNombre"
+        tools:layout_editor_absoluteX="36dp" />
+
+    <Button
+        android:id="@+id/btn_guardar"
+        android:layout_width="match_parent"
+        android:layout_height="80dp"
+        android:layout_marginTop="148dp"
+        android:text="Guardar"
+        android:textSize="24sp"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.0"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/txtDescripcion" />
+
+    <Button
+        android:id="@+id/btn_actualizar"
+        android:layout_width="match_parent"
+        android:layout_height="71dp"
+        android:text="ACTUALIZAR"
+        android:textSize="24sp"
+        app:layout_constraintTop_toBottomOf="@+id/btn_guardar"
+        tools:layout_editor_absoluteX="49dp" />
+
+    <Button
+        android:id="@+id/btn_eliminar"
+        android:layout_width="match_parent"
+        android:layout_height="73dp"
+        android:text="ELIMINAR"
+        android:textSize="24sp"
+        app:layout_constraintTop_toBottomOf="@+id/btn_actualizar"
+        tools:layout_editor_absoluteX="48dp" />
+
+    <Button
+        android:id="@+id/btn_consultar"
+        android:layout_width="match_parent"
+        android:layout_height="85dp"
+        android:text="CONSULTAR"
+        android:textSize="24sp"
+        app:layout_constraintTop_toBottomOf="@+id/btn_eliminar"
+        tools:layout_editor_absoluteX="128dp" />
+
+</androidx.constraintlayout.widget.ConstraintLayout>

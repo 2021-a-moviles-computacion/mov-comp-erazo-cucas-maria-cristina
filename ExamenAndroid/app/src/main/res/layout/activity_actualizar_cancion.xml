@@ -1,0 +1,69 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".ActualizarCancion">
+
+    <EditText
+        android:id="@+id/editTitulo"
+        android:layout_width="339dp"
+        android:layout_height="58dp"
+        android:ems="10"
+        android:hint="TITULO:"
+        android:inputType="textPersonName"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintVertical_bias="0.156" />
+
+    <EditText
+        android:id="@+id/editGenero"
+        android:layout_width="339dp"
+        android:layout_height="57dp"
+        android:layout_marginTop="20dp"
+        android:ems="10"
+        android:hint="GENERO:"
+        android:inputType="textPersonName"
+        app:layout_constraintEnd_toEndOf="@+id/editTitulo"
+        app:layout_constraintHorizontal_bias="0.0"
+        app:layout_constraintStart_toStartOf="@+id/editTitulo"
+        app:layout_constraintTop_toBottomOf="@+id/editTitulo" />
+
+    <EditText
+        android:id="@+id/editDuracion"
+        android:layout_width="333dp"
+        android:layout_height="73dp"
+        android:layout_marginTop="24dp"
+        android:ems="10"
+        android:hint="DURACION:"
+        android:inputType="textPersonName"
+        app:layout_constraintEnd_toEndOf="@+id/editGenero"
+        app:layout_constraintHorizontal_bias="0.0"
+        app:layout_constraintStart_toStartOf="@+id/editGenero"
+        app:layout_constraintTop_toBottomOf="@+id/editGenero" />
+
+    <Button
+        android:id="@+id/btn_actualizar_Cancion"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="84dp"
+        android:text="ACTUALIZAR"
+        app:layout_constraintEnd_toEndOf="@+id/editDuracion"
+        app:layout_constraintStart_toStartOf="@+id/editDuracion"
+        app:layout_constraintTop_toBottomOf="@+id/editDuracion" />
+
+    <TextView
+        android:id="@+id/textView"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="ACTUALIZAR CANCION"
+        app:layout_constraintBottom_toTopOf="@+id/editTitulo"
+        app:layout_constraintEnd_toEndOf="@+id/editTitulo"
+        app:layout_constraintHorizontal_bias="0.441"
+        app:layout_constraintStart_toStartOf="@+id/editTitulo"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintVertical_bias="0.453" />
+</androidx.constraintlayout.widget.ConstraintLayout>
