@@ -1,0 +1,39 @@
+{
+  "project_info": {
+    "project_number": "934676451687",
+    "project_id": "mov-com-2021-a-era-mar",
+    "storage_bucket": "mov-com-2021-a-era-mar.appspot.com"
+  },
+  "client": [
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:934676451687:android:8a55c732ae5da710d19fc2",
+        "android_client_info": {
+          "package_name": "com.example.firebaseuno"
+        }
+      },
+      "oauth_client": [
+        {
+          "client_id": "934676451687-c0n3m5363h1en6no01dcsolbu7j7q5a8.apps.googleusercontent.com",
+          "client_type": 3
+        }
+      ],
+      "api_key": [
+        {
+          "current_key": "AIzaSyD9CVUxRZY3_v_G9tVkrHC4bJt5L1-zlbQ"
+        }
+      ],
+      "services": {
+        "appinvite_service": {
+          "other_platform_oauth_client": [
+            {
+              "client_id": "934676451687-c0n3m5363h1en6no01dcsolbu7j7q5a8.apps.googleusercontent.com",
+              "client_type": 3
+            }
+          ]
+        }
+      }
+    }
+  ],
+  "configuration_version": "1"
+}
