@@ -1,0 +1,57 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".ActualizarAutor">
+
+    <EditText
+        android:id="@+id/et_actualizar_nombre"
+        android:layout_width="379dp"
+        android:layout_height="62dp"
+        android:layout_marginTop="16dp"
+        android:ems="10"
+        android:hint="Nombre:"
+        android:inputType="textPersonName"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent" />
+
+    <EditText
+        android:id="@+id/et_actualizar_pais"
+        android:layout_width="380dp"
+        android:layout_height="61dp"
+        android:layout_marginTop="28dp"
+        android:ems="10"
+        android:hint="País:"
+        android:inputType="textPersonName"
+        app:layout_constraintEnd_toEndOf="@+id/et_actualizar_nombre"
+        app:layout_constraintHorizontal_bias="0.0"
+        app:layout_constraintStart_toStartOf="@+id/et_actualizar_nombre"
+        app:layout_constraintTop_toBottomOf="@+id/et_actualizar_nombre" />
+
+    <EditText
+        android:id="@+id/et_actualizar_edad"
+        android:layout_width="368dp"
+        android:layout_height="67dp"
+        android:layout_marginTop="24dp"
+        android:ems="10"
+        android:hint="Edad:"
+        android:inputType="textPersonName"
+        app:layout_constraintEnd_toEndOf="@+id/et_actualizar_pais"
+        app:layout_constraintHorizontal_bias="0.444"
+        app:layout_constraintStart_toStartOf="@+id/et_actualizar_pais"
+        app:layout_constraintTop_toBottomOf="@+id/et_actualizar_pais" />
+
+    <Button
+        android:id="@+id/btn_actualizarAutor"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="108dp"
+        android:text="ACTUALIZAR"
+        app:layout_constraintEnd_toEndOf="@+id/et_actualizar_edad"
+        app:layout_constraintHorizontal_bias="0.496"
+        app:layout_constraintStart_toStartOf="@+id/et_actualizar_edad"
+        app:layout_constraintTop_toBottomOf="@+id/et_actualizar_edad" />
+</androidx.constraintlayout.widget.ConstraintLayout>

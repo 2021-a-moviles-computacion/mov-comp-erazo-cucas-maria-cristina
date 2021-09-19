@@ -23,9 +23,31 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="80675404-ed39-4ed8-8503-159e07451c6a" name="Default Changelist" comment="">
-      <change afterPath="$PROJECT_DIR$/local.properties" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/../02-android/app/src/main/java/com/example/aplicacionesmoviles2021a/Crud.kt" beforeDir="false" afterPath="$PROJECT_DIR$/../02-android/app/src/main/java/com/example/aplicacionesmoviles2021a/Crud.kt" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/../02-android/app/src/main/res/layout/activity_blist_view.xml" beforeDir="false" afterPath="$PROJECT_DIR$/../02-android/app/src/main/res/layout/activity_blist_view.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../01-firebase/app/src/main/java/com/example/firebaseuno/BAuthUsuario.kt" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../01-firebase/app/src/main/java/com/example/firebaseuno/BUsuarioFirebase.kt" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../01-firebase/app/src/main/java/com/example/firebaseuno/CProducto.kt" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../01-firebase/app/src/main/java/com/example/firebaseuno/DRestaurante.kt" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../01-firebase/app/src/main/java/com/example/firebaseuno/EOrdenes.kt" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../01-firebase/app/src/main/java/com/example/firebaseuno/dto/FirestoreProductoDTO.kt" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../01-firebase/app/src/main/java/com/example/firebaseuno/dto/FirestoreRestauranteDTO.kt" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../01-firebase/app/src/main/java/com/example/firebaseuno/dto/FirestoreRestauranteOrdenDTO.kt" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../01-firebase/app/src/main/java/com/example/firebaseuno/dto/FirestoreUsuarioDto.kt" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../01-firebase/app/src/main/java/com/example/firebaseuno/dto/FirestoreUsuarioOrdenDTO.kt" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../01-firebase/app/src/main/res/layout/activity_cproducto.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../01-firebase/app/src/main/res/layout/activity_drestaurante.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../01-firebase/app/src/main/res/layout/activity_eordenes.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../01-firebase/app/src/main/AndroidManifest.xml" beforeDir="false" afterPath="$PROJECT_DIR$/../01-firebase/app/src/main/AndroidManifest.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../01-firebase/app/src/main/java/com/example/firebaseuno/MainActivity.kt" beforeDir="false" afterPath="$PROJECT_DIR$/../01-firebase/app/src/main/java/com/example/firebaseuno/MainActivity.kt" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../01-firebase/app/src/main/res/layout/activity_main.xml" beforeDir="false" afterPath="$PROJECT_DIR$/../01-firebase/app/src/main/res/layout/activity_main.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.gradle/6.8/executionHistory/executionHistory.bin" beforeDir="false" afterPath="$PROJECT_DIR$/.gradle/6.8/executionHistory/executionHistory.bin" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.gradle/6.8/executionHistory/executionHistory.lock" beforeDir="false" afterPath="$PROJECT_DIR$/.gradle/6.8/executionHistory/executionHistory.lock" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.gradle/6.8/fileHashes/fileHashes.bin" beforeDir="false" afterPath="$PROJECT_DIR$/.gradle/6.8/fileHashes/fileHashes.bin" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.gradle/6.8/fileHashes/fileHashes.lock" beforeDir="false" afterPath="$PROJECT_DIR$/.gradle/6.8/fileHashes/fileHashes.lock" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.gradle/buildOutputCleanup/buildOutputCleanup.lock" beforeDir="false" afterPath="$PROJECT_DIR$/.gradle/buildOutputCleanup/buildOutputCleanup.lock" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.gradle/checksums/checksums.lock" beforeDir="false" afterPath="$PROJECT_DIR$/.gradle/checksums/checksums.lock" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/Deberes.iml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/modules.xml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -80,6 +102,13 @@
     </key>
   </component>
   <component name="RunManager">
+    <configuration default="true" type="AndroidJUnit" factoryName="Android JUnit">
+      <option name="TEST_OBJECT" value="class" />
+      <option name="WORKING_DIRECTORY" value="$MODULE_DIR$" />
+      <method v="2">
+        <option name="Android.Gradle.BeforeRunTask" enabled="true" />
+      </method>
+    </configuration>
     <configuration name="MainKt" type="JetRunConfigurationType" nameIsGenerated="true">
       <module name="Deber01.main" />
       <option name="VM_PARAMETERS" />

@@ -1,0 +1,39 @@
+{
+  "project_info": {
+    "project_number": "199917743378",
+    "project_id": "mov-comp-erazo-examen",
+    "storage_bucket": "mov-comp-erazo-examen.appspot.com"
+  },
+  "client": [
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:199917743378:android:40d2d33f48eb3d3bb657cb",
+        "android_client_info": {
+          "package_name": "com.example.examen2b"
+        }
+      },
+      "oauth_client": [
+        {
+          "client_id": "199917743378-1jf66nq2cfmg05g7ughoa4v9l49h0jk7.apps.googleusercontent.com",
+          "client_type": 3
+        }
+      ],
+      "api_key": [
+        {
+          "current_key": "AIzaSyCyYCtYJC1WJKMvXVVuJCUSe6KGmJTkk34"
+        }
+      ],
+      "services": {
+        "appinvite_service": {
+          "other_platform_oauth_client": [
+            {
+              "client_id": "199917743378-1jf66nq2cfmg05g7ughoa4v9l49h0jk7.apps.googleusercontent.com",
+              "client_type": 3
+            }
+          ]
+        }
+      }
+    }
+  ],
+  "configuration_version": "1"
+}

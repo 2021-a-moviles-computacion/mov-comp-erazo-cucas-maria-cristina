@@ -1,0 +1,68 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".Autores">
+
+    <Button
+        android:id="@+id/btn_crear"
+        android:layout_width="143dp"
+        android:layout_height="59dp"
+        android:layout_marginTop="112dp"
+        android:text="CREAR"
+        app:layout_constraintEnd_toEndOf="@+id/ed_edad"
+        app:layout_constraintHorizontal_bias="0.457"
+        app:layout_constraintStart_toStartOf="@+id/ed_edad"
+        app:layout_constraintTop_toBottomOf="@+id/ed_edad" />
+
+    <EditText
+        android:id="@+id/ed_edad"
+        android:layout_width="388dp"
+        android:layout_height="52dp"
+        android:layout_marginTop="8dp"
+        android:ems="10"
+        android:hint="Edad:"
+        android:inputType="textPersonName"
+        app:layout_constraintEnd_toEndOf="@+id/et_Pais"
+        app:layout_constraintHorizontal_bias="1.0"
+        app:layout_constraintStart_toStartOf="@+id/et_Pais"
+        app:layout_constraintTop_toBottomOf="@+id/et_Pais" />
+
+    <EditText
+        android:id="@+id/et_nombre"
+        android:layout_width="387dp"
+        android:layout_height="52dp"
+        android:ems="10"
+        android:hint="Nombre:"
+        android:inputType="textPersonName"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.458"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintVertical_bias="0.072" />
+
+    <EditText
+        android:id="@+id/et_Pais"
+        android:layout_width="387dp"
+        android:layout_height="61dp"
+        android:ems="10"
+        android:hint="País: "
+        android:inputType="textPersonName"
+        app:layout_constraintEnd_toEndOf="@+id/et_nombre"
+        app:layout_constraintStart_toStartOf="@+id/et_nombre"
+        app:layout_constraintTop_toBottomOf="@+id/et_nombre" />
+
+    <Button
+        android:id="@+id/btn_mostrar_autores"
+        android:layout_width="129dp"
+        android:layout_height="53dp"
+        android:layout_marginTop="24dp"
+        android:text="Mostrar Autores"
+        app:layout_constraintEnd_toEndOf="@+id/btn_crear"
+        app:layout_constraintStart_toStartOf="@+id/btn_crear"
+        app:layout_constraintTop_toBottomOf="@+id/btn_crear" />
+
+</androidx.constraintlayout.widget.ConstraintLayout>
