@@ -1,12 +1,11 @@
-package com.example.examen2b.dto
+package com.example.firebaseuno
 
 import androidx.appcompat.app.AppCompatActivity
 import android.os.Bundle
-import com.example.examen2b.R
 
-class EditarAutores : AppCompatActivity() {
+class Probando : AppCompatActivity() {
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
-        setContentView(R.layout.activity_editar_autores)
+        setContentView(R.layout.activity_probando)
     }
 }

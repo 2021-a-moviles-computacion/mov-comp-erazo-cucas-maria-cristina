@@ -1,0 +1,181 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".EditarCancion">
+
+    <fragment
+        android:id="@+id/fr_EditarCancionMapa1"
+        android:name="com.google.android.gms.maps.SupportMapFragment"
+        android:layout_width="379dp"
+        android:layout_height="439dp"
+        android:layout_marginTop="8dp"
+        android:visibility="invisible"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.333"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/bnt_BuscarEnMapaActualizar"
+        tools:context=".MapsFragment" />
+
+    <TextView
+        android:id="@+id/textView10"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Actualizar Cancion"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.498"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintVertical_bias="0.035" />
+
+    <TextView
+        android:id="@+id/textView12"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="TextView"
+        app:layout_constraintBottom_toTopOf="@+id/ti_editar_direccionCancion"
+        app:layout_constraintStart_toStartOf="@+id/ti_editar_direccionCancion"
+        tools:text="DIRECCION" />
+
+    <TextView
+        android:id="@+id/textView13"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="TITULO"
+        app:layout_constraintBottom_toTopOf="@+id/editar_titulo"
+        app:layout_constraintStart_toStartOf="@+id/editar_titulo" />
+
+    <TextView
+        android:id="@+id/textView14"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="GENERO"
+        app:layout_constraintBottom_toTopOf="@+id/editar_genero"
+        app:layout_constraintStart_toStartOf="@+id/editar_genero" />
+
+    <TextView
+        android:id="@+id/textView15"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="DURACION"
+        app:layout_constraintBottom_toTopOf="@+id/editar_duracion"
+        app:layout_constraintStart_toStartOf="@+id/editar_duracion" />
+
+    <EditText
+        android:id="@+id/ti_editar_direccionCancion"
+        android:layout_width="290dp"
+        android:layout_height="wrap_content"
+        android:ems="10"
+        android:enabled="false"
+        android:hint="DIRECCION"
+        android:inputType="textPersonName"
+        tools:layout_editor_absoluteX="61dp"
+        tools:layout_editor_absoluteY="153dp" />
+
+    <EditText
+        android:id="@+id/editar_titulo"
+        android:layout_width="290dp"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="16dp"
+        android:ems="10"
+        android:hint="TITULO"
+        android:inputType="numberDecimal"
+        app:layout_constraintEnd_toEndOf="@+id/ti_editar_direccionCancion"
+        app:layout_constraintHorizontal_bias="0.0"
+        app:layout_constraintStart_toStartOf="@+id/ti_editar_direccionCancion"
+        app:layout_constraintTop_toBottomOf="@+id/btn_ir_actualizarDireccionMapa" />
+
+    <EditText
+        android:id="@+id/editar_genero"
+        android:layout_width="290dp"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="32dp"
+        android:ems="10"
+        android:hint="GENERO"
+        android:inputType="numberDecimal"
+        app:layout_constraintEnd_toEndOf="@+id/editar_titulo"
+        app:layout_constraintStart_toStartOf="@+id/editar_titulo"
+        app:layout_constraintTop_toBottomOf="@+id/editar_titulo" />
+
+    <EditText
+        android:id="@+id/editar_duracion"
+        android:layout_width="290dp"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="32dp"
+        android:ems="10"
+        android:hint="DURACION"
+        android:inputType="numberSigned"
+        app:layout_constraintEnd_toEndOf="@+id/editar_genero"
+        app:layout_constraintHorizontal_bias="0.0"
+        app:layout_constraintStart_toStartOf="@+id/editar_genero"
+        app:layout_constraintTop_toBottomOf="@+id/editar_genero" />
+
+    <Button
+        android:id="@+id/btn_editarCancion"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="ACTUALIZAR CANCION"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        tools:layout_editor_absoluteY="621dp" />
+
+    <Button
+        android:id="@+id/btn_guardarActualizarUbicacion"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Guardar"
+        android:visibility="invisible"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.473"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/fr_EditarCancionMapa1" />
+
+    <EditText
+        android:id="@+id/ti_latitud_actualizar"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="12dp"
+        android:ems="10"
+        android:hint="LATITUD"
+        android:inputType="numberSigned|numberDecimal"
+        android:visibility="invisible"
+        app:layout_constraintEnd_toEndOf="@+id/textView10"
+        app:layout_constraintStart_toStartOf="@+id/textView10"
+        app:layout_constraintTop_toBottomOf="@+id/textView10" />
+
+    <EditText
+        android:id="@+id/ti_longitud_actualizar"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="8dp"
+        android:ems="10"
+        android:hint="LONGITUD"
+        android:inputType="numberSigned|numberDecimal"
+        android:visibility="invisible"
+        app:layout_constraintEnd_toEndOf="@+id/ti_latitud_actualizar"
+        app:layout_constraintStart_toStartOf="@+id/ti_latitud_actualizar"
+        app:layout_constraintTop_toBottomOf="@+id/ti_latitud_actualizar" />
+
+    <Button
+        android:id="@+id/bnt_BuscarEnMapaActualizar"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="8dp"
+        android:text="Buscar"
+        android:visibility="invisible"
+        app:layout_constraintEnd_toEndOf="@+id/ti_longitud_actualizar"
+        app:layout_constraintTop_toBottomOf="@+id/ti_longitud_actualizar" />
+
+    <Button
+        android:id="@+id/btn_ir_actualizarDireccionMapa"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Ubicacion"
+        app:layout_constraintEnd_toEndOf="@+id/ti_editar_direccionCancion"
+        app:layout_constraintTop_toBottomOf="@+id/ti_editar_direccionCancion" />
+
+</androidx.constraintlayout.widget.ConstraintLayout>

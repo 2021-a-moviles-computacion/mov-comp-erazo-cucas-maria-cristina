@@ -6,19 +6,44 @@
     android:layout_height="match_parent"
     tools:context=".VerCanciones">
 
-    <ListView
-        android:id="@+id/lv_vercanciones"
-        android:layout_width="412dp"
-        android:layout_height="377dp"
-        tools:layout_editor_absoluteX="1dp"
-        tools:layout_editor_absoluteY="1dp" />
+    <TextView
+        android:id="@+id/textView3"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Canciones"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.498"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintVertical_bias="0.022" />
+
+    <TextView
+        android:id="@+id/tv_usuario_canciones"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="24dp"
+        android:text="USUARIO"
+        app:layout_constraintEnd_toEndOf="@+id/textView3"
+        app:layout_constraintStart_toStartOf="@+id/textView3"
+        app:layout_constraintTop_toBottomOf="@+id/textView3" />
 
     <Button
-        android:id="@+id/btn_crear_canciones"
-        android:layout_width="151dp"
-        android:layout_height="70dp"
-        android:text="Crear"
-        app:layout_constraintEnd_toEndOf="@+id/lv_vercanciones"
-        app:layout_constraintStart_toStartOf="@+id/lv_vercanciones"
-        app:layout_constraintTop_toBottomOf="@+id/lv_vercanciones" />
+        android:id="@+id/btn_irAActividadCrearCancion"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="28dp"
+        android:text="CREAR CANCION"
+        app:layout_constraintEnd_toEndOf="@+id/ltv_canciones"
+        app:layout_constraintStart_toStartOf="@+id/ltv_canciones"
+        app:layout_constraintTop_toBottomOf="@+id/ltv_canciones" />
+
+    <ListView
+        android:id="@+id/ltv_canciones"
+        android:layout_width="422dp"
+        android:layout_height="294dp"
+        android:layout_marginTop="60dp"
+        app:layout_constraintEnd_toEndOf="@+id/tv_usuario_canciones"
+        app:layout_constraintStart_toStartOf="@+id/tv_usuario_canciones"
+        app:layout_constraintTop_toBottomOf="@+id/tv_usuario_canciones" />
 </androidx.constraintlayout.widget.ConstraintLayout>

@@ -1,3 +1,4 @@
 <resources>
     <string name="app_name">Examen2B</string>
+    <string name="title_activity_maps_fragment">Map</string>
 </resources>

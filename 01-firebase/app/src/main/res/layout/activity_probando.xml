@@ -1,0 +1,194 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@drawable/fondo4"
+    tools:context=".reproductor">
+
+    <ScrollView
+        android:layout_width="409dp"
+        android:layout_height="688dp"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="1.0"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintVertical_bias="0.372">
+
+        <androidx.constraintlayout.widget.ConstraintLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            >
+
+            <TextView
+                android:id="@+id/textView"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="REPRODUCIENDO DESDE LA PLAYLIST"
+                android:textAlignment="textStart"
+                android:textColor="#FFFFFF"
+                android:textSize="8sp"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toTopOf="parent" />
+
+            <TextView
+                android:id="@+id/tv_nombre_lista"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="Lista1"
+                android:textColor="#FFFFFF"
+                android:textSize="8sp"
+                android:textStyle="bold"
+                app:layout_constraintEnd_toEndOf="@+id/textView"
+                app:layout_constraintStart_toStartOf="@+id/textView"
+                app:layout_constraintTop_toBottomOf="@+id/textView" />
+
+            <ImageView
+                android:id="@+id/iv_caratula"
+                android:layout_width="339dp"
+                android:layout_height="366dp"
+                android:layout_marginTop="52dp"
+                app:layout_constraintEnd_toEndOf="@+id/tv_nombre_lista"
+                app:layout_constraintHorizontal_bias="0.501"
+                app:layout_constraintStart_toStartOf="@+id/tv_nombre_lista"
+                app:layout_constraintTop_toBottomOf="@+id/tv_nombre_lista"
+                />
+
+            <TextView
+                android:id="@+id/tv_nombre_cancion"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="32dp"
+                android:layout_marginTop="24dp"
+                android:text="Con Lo Puesto"
+                android:textColor="#FFFFFF"
+                android:textStyle="bold"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toBottomOf="@+id/iv_caratula" />
+
+            <TextView
+                android:id="@+id/tv_nombre_artista"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="32dp"
+                android:layout_marginTop="4dp"
+                android:text="MXRGXN, Sharif"
+                android:textColor="#FFFFFF"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toBottomOf="@+id/tv_nombre_cancion" />
+
+            <ProgressBar
+                android:id="@+id/progressBar"
+                style="?android:attr/progressBarStyleHorizontal"
+                android:layout_width="342dp"
+                android:layout_height="21dp"
+                android:layout_marginTop="80dp"
+                android:progressTint="#FFFFFF"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintHorizontal_bias="0.494"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toBottomOf="@+id/iv_caratula" />
+
+            <TextView
+                android:id="@+id/tv_inicion"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="32dp"
+                android:layout_marginTop="3dp"
+                android:text="--"
+                android:textColor="#FFFFFF"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toBottomOf="@+id/progressBar" />
+
+            <TextView
+                android:id="@+id/tv_final"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="3dp"
+                android:layout_marginEnd="36dp"
+                android:text="--"
+                android:textColor="#FFFFFF"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintTop_toBottomOf="@+id/progressBar" />
+
+            <ImageView
+                android:id="@+id/iv_lista_reproduccion"
+                android:layout_width="25dp"
+                android:layout_height="25dp"
+                android:layout_marginTop="33dp"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintHorizontal_bias="0.857"
+                app:layout_constraintStart_toEndOf="@+id/tv_nombre_cancion"
+                app:layout_constraintTop_toBottomOf="@+id/iv_caratula"
+                app:srcCompat="@drawable/ic_lista_de_reproduccion" />
+
+            <ImageView
+                android:id="@+id/iv_favorito"
+                android:layout_width="23dp"
+                android:layout_height="23dp"
+                app:layout_constraintEnd_toStartOf="@+id/iv_lista_reproduccion"
+                app:layout_constraintHorizontal_bias="0.919"
+                app:layout_constraintStart_toEndOf="@+id/tv_nombre_cancion"
+                app:layout_constraintTop_toTopOf="@+id/iv_lista_reproduccion"
+                app:srcCompat="@drawable/ic_favorito" />
+
+            <ImageView
+                android:id="@+id/btn_play"
+                android:layout_width="61dp"
+                android:layout_height="61dp"
+                android:layout_marginTop="24dp"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toBottomOf="@+id/progressBar"
+                app:srcCompat="@drawable/ic_pausa03" />
+
+            <ImageView
+                android:id="@+id/btn_anterior"
+                android:layout_width="20dp"
+                android:layout_height="20dp"
+                android:layout_marginEnd="40dp"
+                app:layout_constraintBottom_toBottomOf="@+id/btn_play"
+                app:layout_constraintEnd_toStartOf="@+id/btn_play"
+                app:layout_constraintTop_toTopOf="@+id/btn_play"
+                app:layout_constraintVertical_bias="0.536"
+                app:srcCompat="@drawable/ic_anterior" />
+
+            <ImageView
+                android:id="@+id/btn_aleatorio"
+                android:layout_width="20dp"
+                android:layout_height="20dp"
+                android:layout_marginEnd="56dp"
+                app:layout_constraintBottom_toBottomOf="@+id/btn_anterior"
+                app:layout_constraintEnd_toStartOf="@+id/btn_anterior"
+                app:layout_constraintTop_toTopOf="@+id/btn_anterior"
+                app:layout_constraintVertical_bias="0.0"
+                app:srcCompat="@drawable/ic_aleatorio" />
+
+            <ImageView
+                android:id="@+id/btn_siguiente"
+                android:layout_width="20dp"
+                android:layout_height="20dp"
+                android:layout_marginStart="40dp"
+                app:layout_constraintBottom_toBottomOf="@+id/btn_play"
+                app:layout_constraintStart_toEndOf="@+id/btn_play"
+                app:layout_constraintTop_toTopOf="@+id/btn_play"
+                app:layout_constraintVertical_bias="0.536"
+                app:srcCompat="@drawable/ic_proximo" />
+
+            <ImageView
+                android:id="@+id/btn_repetir"
+                android:layout_width="20dp"
+                android:layout_height="20dp"
+                android:layout_marginStart="56dp"
+                app:layout_constraintBottom_toBottomOf="@+id/btn_siguiente"
+                app:layout_constraintStart_toEndOf="@+id/btn_siguiente"
+                app:srcCompat="@drawable/ic_repetir" />
+
+        </androidx.constraintlayout.widget.ConstraintLayout>
+    </ScrollView>
+
+
+</androidx.constraintlayout.widget.ConstraintLayout>
