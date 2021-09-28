@@ -39,11 +39,12 @@ class CrearAutores : AppCompatActivity() {
     }
 
     fun crearAutor(){
+        //llamando a los componentes de nuestra interfaz
         val nombre = findViewById<EditText>(R.id.et_nombre)
         val pais = findViewById<EditText>(R.id.et_pais)
         val edad = findViewById<EditText>(R.id.et_edad)
 
-
+        //crear un objeto Autor
         var objetoAutor = AutorDTO(
             null,
             nombre.text.toString(),

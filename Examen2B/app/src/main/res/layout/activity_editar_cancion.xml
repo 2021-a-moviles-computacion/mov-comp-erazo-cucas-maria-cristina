@@ -82,7 +82,7 @@
         android:layout_marginTop="16dp"
         android:ems="10"
         android:hint="TITULO"
-        android:inputType="numberDecimal"
+        android:inputType="text"
         app:layout_constraintEnd_toEndOf="@+id/ti_editar_direccionCancion"
         app:layout_constraintHorizontal_bias="0.0"
         app:layout_constraintStart_toStartOf="@+id/ti_editar_direccionCancion"
@@ -95,7 +95,7 @@
         android:layout_marginTop="32dp"
         android:ems="10"
         android:hint="GENERO"
-        android:inputType="numberDecimal"
+        android:inputType="text"
         app:layout_constraintEnd_toEndOf="@+id/editar_titulo"
         app:layout_constraintStart_toStartOf="@+id/editar_titulo"
         app:layout_constraintTop_toBottomOf="@+id/editar_titulo" />
@@ -107,7 +107,7 @@
         android:layout_marginTop="32dp"
         android:ems="10"
         android:hint="DURACION"
-        android:inputType="numberSigned"
+        android:inputType="text"
         app:layout_constraintEnd_toEndOf="@+id/editar_genero"
         app:layout_constraintHorizontal_bias="0.0"
         app:layout_constraintStart_toStartOf="@+id/editar_genero"
@@ -118,9 +118,9 @@
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:text="ACTUALIZAR CANCION"
-        app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintStart_toStartOf="parent"
-        tools:layout_editor_absoluteY="621dp" />
+        app:layout_constraintEnd_toEndOf="@+id/editar_duracion"
+        app:layout_constraintStart_toStartOf="@+id/editar_duracion"
+        app:layout_constraintTop_toBottomOf="@+id/editar_duracion" />
 
     <Button
         android:id="@+id/btn_guardarActualizarUbicacion"

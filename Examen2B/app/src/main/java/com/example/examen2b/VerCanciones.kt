@@ -129,10 +129,10 @@ class VerCanciones : AppCompatActivity() {
                 Log.i("list-view-cancion","Eliminar Cancion id: ${CancionSeleccionada}")
 
                 val db = Firebase.firestore
-                var refUsuario = db
+                var refCancion = db
                     .collection("canciones")
 
-                refUsuario.document(CancionSeleccionada.uid.toString())
+                refCancion.document(CancionSeleccionada.uid.toString())
                     .delete()
                     .addOnSuccessListener {
                         adapter?.remove(adapter!!.getItem(posicionItemSelecionado));

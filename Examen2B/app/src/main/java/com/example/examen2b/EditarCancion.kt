@@ -39,7 +39,7 @@ class EditarCancion : AppCompatActivity()  {
 
         solicitarPermisos()
 
-        cancion = intent.getParcelableExtra<CancionDTO>("cancion")
+        cancion = intent.getParcelableExtra<CancionDTO>("canciones")
 
 
         val ingresarDireccionCancion = findViewById<EditText>(R.id.ti_editar_direccionCancion)
@@ -82,6 +82,60 @@ class EditarCancion : AppCompatActivity()  {
             .setOnClickListener {
                 mapa()
             }
+    }
+
+
+
+    fun actualizarCancion(){
+
+
+        val ingresarDireccionCancion = findViewById<EditText>(R.id.ti_editar_direccionCancion)
+        val titulo = findViewById<EditText>(R.id.editar_titulo)
+        val genero = findViewById<EditText>(R.id.editar_genero)
+        val duracion= findViewById<EditText>(R.id.editar_duracion)
+
+
+
+
+        var objetoCancion = CancionDTO(
+            cancion!!.uid.toString(),
+            cancion!!.uid_usuario.toString(),
+
+            ubicacionMapa,
+            titulo.text.toString(),
+            genero.text.toString(),
+            duracion.text.toString(),
+
+            )
+
+        val nuevaCancion = hashMapOf<String,Any>(
+
+            "ubicacion" to objetoCancion.ubicacion!!,
+            "tituloCancion" to objetoCancion.tituloCancion!!,
+            "generoCancion" to objetoCancion.generoCancion!!,
+            "duracionCancion" to objetoCancion.duracionCancion!!,
+
+            )
+
+        val db = Firebase.firestore
+        val referencia = db.collection("canciones")
+            .document(cancion?.uid!!)
+
+        db.runTransaction {  transaction ->
+           transaction.update(referencia, nuevaCancion)
+        }
+            .addOnSuccessListener {
+                val usuario1 = intent.getParcelableExtra<AutorDTO>("autores")!!
+                abrirActividadConParametros(VerCanciones::class.java,usuario1)
+                Log.i("transaccion", "Transaccion Completa")
+            }
+            .addOnFailureListener{
+                Log.i("transaccion", "ERROR")
+            }
+
+
+
+
     }
 
     fun mapa(){
@@ -205,58 +259,7 @@ class EditarCancion : AppCompatActivity()  {
 
     }
 
-    fun actualizarCancion(){
 
-
-        val ingresarDireccionCancion = findViewById<EditText>(R.id.ti_editar_direccionCancion)
-        val titulo = findViewById<EditText>(R.id.editar_titulo)
-        val genero = findViewById<EditText>(R.id.editar_genero)
-        val duracion= findViewById<EditText>(R.id.editar_duracion)
-
-
-
-
-        var objetoCancion = CancionDTO(
-            cancion!!.uid.toString(),
-            cancion!!.uid_usuario.toString(),
-
-            ubicacionMapa,
-            titulo.text.toString(),
-            genero.text.toString(),
-            duracion.text.toString(),
-
-        )
-
-        val nuevaCancion = hashMapOf<String,Any>(
-
-            "ubicacion" to objetoCancion.ubicacion!!,
-            "tituloCancion" to objetoCancion.tituloCancion!!,
-            "generoCancion" to objetoCancion.generoCancion!!,
-            "duracionCancion" to objetoCancion.duracionCancion!!,
-
-        )
-
-        val db = Firebase.firestore
-        val referencia = db.collection("cancion")
-            .document(cancion?.uid!!)
-
-        db.runTransaction {  transaction ->
-            //val documentoActual = transaction.get(referencia)
-            transaction.update(referencia, nuevaCancion)
-        }
-            .addOnSuccessListener {
-                val usuario1 = intent.getParcelableExtra<AutorDTO>("autores")!!
-                abrirActividadConParametros(VerCanciones::class.java,usuario1)
-                Log.i("transaccion", "Transaccion Completa")
-            }
-            .addOnFailureListener{
-                Log.i("transaccion", "ERROR")
-            }
-
-
-
-
-    }
 
     fun abrirActividadConParametros(
         clase: Class<*>,

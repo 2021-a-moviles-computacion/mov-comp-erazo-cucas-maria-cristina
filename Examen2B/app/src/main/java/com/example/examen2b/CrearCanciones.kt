@@ -29,6 +29,10 @@ class CrearCanciones : AppCompatActivity() {
     var ubicacionMapa: LatLng? = null
     private lateinit var mapa: GoogleMap
     var permisos = false
+    var ArtistaSeleccionado: AutorDTO? =  null
+    var latitud : Double? = null
+    var longitud : Double? = null
+    val arregloArtistas = arrayListOf<AutorDTO>()
 
 
     override fun onCreate(savedInstanceState: Bundle?) {
@@ -101,16 +105,18 @@ class CrearCanciones : AppCompatActivity() {
             }
         }
 
+
+
         val botonBuscarEnMapa = findViewById<Button>(R.id.bnt_BuscarEnMapa)
         botonBuscarEnMapa
             .setOnClickListener {
                 mapa.clear()
+                //buscar en el mapa un lugar
+                //que sera ingresada por el usuario
                 val buscar = LatLng(ingresarLatitud.text.toString().toDouble(), ingresarLongitud.text.toString().toDouble())
                 val zoom = 17f
-                moverCamaraZoom(buscar,zoom)
                 anadirMarcador(buscar,"Direccion")
-
-
+                moverCamaraZoom(buscar,zoom)
             }
 
 
@@ -122,6 +128,44 @@ class CrearCanciones : AppCompatActivity() {
                 ubicacionMapa = LatLng(ingresarLatitud.text.toString().toDouble(), ingresarLongitud.text.toString().toDouble())
 
             }
+    }
+
+    fun establecerConfiguracionMapa(){
+        val contexto = this. applicationContext
+        with(mapa){
+            val permisosFineLocation = ContextCompat
+                .checkSelfPermission(
+                    contexto,
+                    android.Manifest.permission.ACCESS_FINE_LOCATION
+                )
+
+            val tienePermisos = permisosFineLocation == PackageManager.PERMISSION_GRANTED
+            if(tienePermisos){
+                mapa.isMyLocationEnabled = true //no tenemos aun permisos
+            }
+            uiSettings.isZoomControlsEnabled = true
+            uiSettings.isMyLocationButtonEnabled = true //no tenemos aun permisos
+        }
+
+    }
+
+    // establecer el marcador
+    fun anadirMarcador(latLng: LatLng, title: String){
+        mapa.clear()
+        mapa.addMarker(
+            MarkerOptions()
+                .position(latLng)
+                .title(title)
+            //.draggable(true)
+        )
+    }
+    // centrar la camara y el nivel de zoom
+    fun moverCamaraZoom(latLng: LatLng, zoom: Float ){
+        mapa.moveCamera(
+            CameraUpdateFactory
+                .newLatLngZoom(latLng, zoom)
+        )
+
     }
 
     fun visibilidad(mapa:Boolean){
@@ -150,7 +194,6 @@ class CrearCanciones : AppCompatActivity() {
             titulo.isVisible = false
             genero.isVisible = false
             duracion.isVisible = false
-
             botonCrearUbicacion.isVisible = false
             botonCrearCancion.isVisible = false
 
@@ -181,6 +224,9 @@ class CrearCanciones : AppCompatActivity() {
 
 
     }
+// cuando demos clic a un marcador
+    //cuando damos clic en el marcador vamos a saber
+    // a q marcador le dimos clic
 
     fun escucharListeners(){
 
@@ -199,22 +245,6 @@ class CrearCanciones : AppCompatActivity() {
     }
 
 
-    fun anadirMarcador(latLng: LatLng, title: String){
-        mapa.addMarker(
-            MarkerOptions()
-                .position(latLng)
-                .title(title)
-            //.draggable(true)
-        )
-    }
-
-    fun moverCamaraZoom(latLng: LatLng, zoom: Float ){
-        mapa.moveCamera(
-            CameraUpdateFactory
-                .newLatLngZoom(latLng, zoom)
-        )
-
-    }
 
     fun solicitarPermisos(){
 
@@ -238,24 +268,7 @@ class CrearCanciones : AppCompatActivity() {
         }
     }
 
-    fun establecerConfiguracionMapa(){
-        val contexto = this. applicationContext
-        with(mapa){
-            val permisosFineLocation = ContextCompat
-                .checkSelfPermission(
-                    contexto,
-                    android.Manifest.permission.ACCESS_FINE_LOCATION
-                )
 
-            val tienePermisos = permisosFineLocation == PackageManager.PERMISSION_GRANTED
-            if(tienePermisos){
-                mapa.isMyLocationEnabled = true //no tenemos aun permisos
-            }
-            uiSettings.isZoomControlsEnabled = true
-            uiSettings.isMyLocationButtonEnabled = true //no tenemos aun permisos
-        }
-
-    }
 
     fun crearCancion(){
 
@@ -277,7 +290,7 @@ class CrearCanciones : AppCompatActivity() {
             genero.text.toString().toString(),
             duracion.text.toString().toString(),
 
-        )
+            )
 
         val nuevaCancion = hashMapOf<String,Any>(
             "usuario_uid" to objetoCancion.uid_usuario!!,
@@ -287,7 +300,7 @@ class CrearCanciones : AppCompatActivity() {
             "generoCancion" to objetoCancion.generoCancion!!,
             "duracionCancion" to objetoCancion.duracionCancion!!,
 
-        )
+            )
 
         val db = Firebase.firestore
         val referencia = db.collection("canciones")
@@ -319,7 +332,7 @@ class CrearCanciones : AppCompatActivity() {
             val botonCrearCancion = findViewById<Button>(R.id.btn_CrearCancion)
             botonCrearCancion.isEnabled = (
 
-                            ingresarDireccionCancion.isNotEmpty() &&
+                    ingresarDireccionCancion.isNotEmpty() &&
                             titulo.isNotEmpty() &&
                             genero.isNotEmpty() &&
                             duracion.isNotEmpty())
@@ -352,3 +365,11 @@ private fun Boolean.toInt(): Int {
         0
     }
 }
+
+
+
+
+
+
+
+

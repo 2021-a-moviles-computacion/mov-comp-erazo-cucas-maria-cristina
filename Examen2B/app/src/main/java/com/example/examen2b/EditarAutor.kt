@@ -58,7 +58,7 @@ class EditarAutor : AppCompatActivity() {
             edad.text.toString(),
 
 
-        )
+            )
 
 
         val nuevoUsuario = hashMapOf<String,Any>(
@@ -66,7 +66,7 @@ class EditarAutor : AppCompatActivity() {
             "pais" to objetoUsuarioDto.pais!!,
             "edad" to objetoUsuarioDto.edad!!,
 
-        )
+            )
 
         val db = Firebase.firestore
         val referencia = db.collection("autores")
